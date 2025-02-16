@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {},
     container: {
-      padding: '10rem', // this is an example of overriding the default container padding (styles in TW)
+      padding: {
+      md: '10rem',
+      } // this is an example of overriding the default container 
     }
   },
   plugins: [],

@@ -1,6 +1,7 @@
 // here will lay the layout content in between header and footer
 
 
+
 interface MainLayoutProps {
     children: React.ReactNode
   };
