@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+}
+
+@layer components{
+.sign-in-btn {
+    @apply flex items-center bg-slate-200 text-blue-600 px-3 font-bold border rounded-full hover:bg-slate-100;
+}
+
+.header{
+  @apply bg-blue-800 py-6;
+}
+.footer{
+    @apply bg-blue-800 py-10;
+}
+
+}
