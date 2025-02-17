@@ -1,7 +1,7 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import Hero from "../components/Hero"
-import MainLayout from "../components/MainLayout"
+import Footer from "../components/Footer/Footer"
+import Header from "../components/Header/Header"
+import Hero from "../components/Hero/Hero"
+import MainLayout from "../components/MainLayout/MainLayout"
 
 interface MainLayoutProps {
   children: React.ReactNode
