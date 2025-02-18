@@ -3,8 +3,10 @@ import { useForm } from "react-hook-form";
 import { useAppContext } from "../contexts/AppContext";
 import * as apiClient from "../api-clients.ts/usersAPIservice"; // the * imports all the functions in the usersAPIservice file as apiClient.
 import { RegisterFormData } from "./registerFormData.types";
+import { useNavigate } from "react-router-dom";
 
   const RegisterForm = () => {
+    const navigate = useNavigate();
     const {showToast} = useAppContext();
   
     const {
@@ -20,6 +22,7 @@ import { RegisterFormData } from "./registerFormData.types";
       mutationFn: (data: RegisterFormData) => apiClient.register(data),
       onSuccess: () => {
         showToast({message: "Account created successfully", type: "success"});
+        navigate("/");
       },
       onError: (error: Error) => {
         showToast({message: error.message, type: "error"});

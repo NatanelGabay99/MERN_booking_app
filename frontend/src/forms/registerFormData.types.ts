@@ -5,5 +5,4 @@ export type RegisterFormData = {
     password: string;
     confirmPassword: string;
     phoneNumber: string;
-    data: RegisterFormData;
   };

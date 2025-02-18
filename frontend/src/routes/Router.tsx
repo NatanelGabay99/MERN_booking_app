@@ -12,6 +12,8 @@ const Router = () => {
       <Route path="*" element={<Navigate to={ROUTES.HOME} />} />
       <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
+      <Route path={ROUTES.MY_BOOKINGS} element={''}></Route>
+      <Route path={ROUTES.MY_HOTELS} element={''}></Route>
     </Routes>
   );
 };

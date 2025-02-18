@@ -3,6 +3,7 @@ import { check, validationResult } from "express-validator";
 import User from "../schemas/userSchema.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { verifyToken } from "../middlewares/auth.js";
 
 const router = express.Router();
 
@@ -49,5 +50,10 @@ router.post(
     }
   }
 );
+
+// this endpoint will allow the frontend to check if the user is logged in
+router.post('/validate-token', verifyToken, (req: Request, res: Response) => {
+    res.status(200).send({ userId: req.userId });
+});
 
 export default router;
