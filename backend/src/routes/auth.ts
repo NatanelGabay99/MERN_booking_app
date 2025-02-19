@@ -56,4 +56,10 @@ router.post('/validate-token', verifyToken, (req: Request, res: Response) => {
     res.status(200).send({ userId: req.userId });
 });
 
+// this endpoint will allow the frontend to log out the user
+router.post('/logout', (req: Request, res: Response) => {
+res.clearCookie('auth-token');
+res.send();
+});
+
 export default router;

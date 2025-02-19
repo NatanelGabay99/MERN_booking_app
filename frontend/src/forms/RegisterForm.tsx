@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { useAppContext } from "../contexts/AppContext";
-import * as apiClient from "../api-clients.ts/usersAPIservice"; // the * imports all the functions in the usersAPIservice file as apiClient.
+import * as apiClient from "../api-clients/usersAPIservice"; // the * imports all the functions in the usersAPIservice file as apiClient.
 import { RegisterFormData } from "./registerFormData.types";
 import { useNavigate } from "react-router-dom";
 
