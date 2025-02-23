@@ -3,7 +3,7 @@ import { LoginFormData } from "./loginFormData.types";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import * as apiClient from "../api-clients/usersAPIservice"; // the * imports all the functions in the usersAPIservice file as apiClient.
 import { useAppContext } from "../contexts/AppContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const { showToast } = useAppContext();
@@ -69,9 +69,12 @@ const LoginForm = () => {
           </span>
         )}
       </label>
-      <span>
+      <span className="flex items-center justify-between">
+      <span className="text-sm">
+        Not Registered? <Link to='/register' className="underline">Create an account here</Link>
+      </span>
         <button type="submit" className="submit-login-form-btn">
-          Sign in
+          Login
         </button>
       </span>
     </form>

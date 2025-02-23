@@ -1,4 +1,3 @@
-import { clear } from "console";
 import { useEffect } from "react";
 
 type ToastProps = {
